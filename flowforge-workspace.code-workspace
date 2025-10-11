@@ -1,0 +1,93 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    // terminal settings
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultLocation": "view",
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono',  Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontLigatures.enabled": true,
+    // editor settings
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'FiraCode Nerd Font Propo', Consolas, 'Courier New', monospace",
+    // file settings
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+      "**/.git": false,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+    // settings based on file types
+    "[css]": {
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "bradlc.vscode-tailwindcss",
+      "editor.tabSize": 2
+    },
+    "[json]": {
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.tabSize": 2,
+      "editor.insertSpaces": false,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.tabSize": 2,
+      "editor.insertSpaces": false,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.tabSize": 2,
+      "editor.tabCompletion": "on",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.tabSize": 2,
+      "editor.tabCompletion": "on",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.maxTokenizationLineLength": 2500,
+      "editor.tabSize": 2,
+      "editor.tabCompletion": "on",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.tabSize": 2,
+      "editor.tabCompletion": "on",
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // workbench settings
+    "workbench.iconTheme": "gruvbox-material-icon-theme",
+    "workbench.colorTheme": "Monokai",
+    "git.ignoreLimitWarning": true,
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "oderwat.indent-rainbow",
+      "gruntfuggly.todo-tree",
+      "mikestead.dotenv",
+      "johnpapa.vscode-peacock",
+      "ibm.output-colorizer",
+      "mintlify.document",
+      "mintlify.mintlify-snippets",
+      "bradlc.vscode-tailwindcss",
+      "pkief.material-icon-theme",
+      "jonathanharty.gruvbox-material-icon-theme",
+      "sainnhe.gruvbox-material",
+      "github.vscode-github-actions",
+      "ms-azuretools.vscode-containers"
+    ]
+  }
+}
