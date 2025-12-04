@@ -1,0 +1,75 @@
+{
+  "name": "sysforgeops",
+  "private": false,
+  "version": "0.0.0",
+  "description": "A platform combining AI and automation to streamline processes.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/mdirshadengineer/SysForgeOps",
+  "repository": "packages/cli",
+  "bugs": "https://github.com/mdirshadengineer/SysForgeOps/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshadengineer+github@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "./bin",
+    "./dist"
+  ],
+  "keywords": [],
+  "bin": {
+    "sysforgeops": "./bin/sysforgeops.js"
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "start": "run-script-os",
+    "start:default": "cd bin && ./sysforgeops.js",
+    "start:windows": "cd bin && sysforgeops",
+    "lint": "eslint",
+    "clean": "rimraf dist dist-dev .turbo"
+  },
+  "oclif": {
+    "bin": "sysforgeops",
+    "dirname": "sysforgeops",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "start": {
+        "description": "Start the server"
+      }
+    }
+  },
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^5",
+    "fast-glob": "^3.3.3",
+    "isbot": "^5.1.31",
+    "reflect-metadata": "^0.2.2",
+    "semver": "^7.7.3",
+    "source-map-support": "^0.5.21",
+    "tsyringe": "^4.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10",
+    "oclif": "^4",
+    "rimraf": "^6.0.1",
+    "run-script-os": "^1.1.6",
+    "shx": "^0.3.3",
+    "typescript": "^5"
+  }
+}

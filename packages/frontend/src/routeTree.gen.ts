@@ -8,261 +8,261 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as RapidStudioRouteRouteImport } from './routes/rapid-studio/route'
-import { Route as AppRouteRouteImport } from './routes/app/route'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as RapidStudioIndexRouteImport } from './routes/rapid-studio/index'
-import { Route as AppIndexRouteImport } from './routes/app/index'
-import { Route as AppPostRouteImport } from './routes/app/post'
-import { Route as RapidStudioAppRouteRouteImport } from './routes/rapid-studio/app_/route'
-import { Route as RapidStudioAppIndexRouteImport } from './routes/rapid-studio/app_/index'
-import { Route as RapidStudioAppAppIdIndexRouteImport } from './routes/rapid-studio/app_/$appId_/index'
-import { Route as RapidStudioAppAppIdEntityIndexRouteImport } from './routes/rapid-studio/app_/$appId_/$entity_/index'
-import { Route as RapidStudioAppAppIdEntityEntityIdRouteImport } from './routes/rapid-studio/app_/$appId_/$entity_/$entityId'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as RapidStudioRouteRouteImport } from "./routes/rapid-studio/route";
+import { Route as AppRouteRouteImport } from "./routes/app/route";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as RapidStudioIndexRouteImport } from "./routes/rapid-studio/index";
+import { Route as AppIndexRouteImport } from "./routes/app/index";
+import { Route as AppPostRouteImport } from "./routes/app/post";
+import { Route as RapidStudioAppRouteRouteImport } from "./routes/rapid-studio/app_/route";
+import { Route as RapidStudioAppIndexRouteImport } from "./routes/rapid-studio/app_/index";
+import { Route as RapidStudioAppAppIdIndexRouteImport } from "./routes/rapid-studio/app_/$appId_/index";
+import { Route as RapidStudioAppAppIdEntityIndexRouteImport } from "./routes/rapid-studio/app_/$appId_/$entity_/index";
+import { Route as RapidStudioAppAppIdEntityEntityIdRouteImport } from "./routes/rapid-studio/app_/$appId_/$entity_/$entityId";
 
 const RapidStudioRouteRoute = RapidStudioRouteRouteImport.update({
-  id: '/rapid-studio',
-  path: '/rapid-studio',
+  id: "/rapid-studio",
+  path: "/rapid-studio",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AppRouteRoute = AppRouteRouteImport.update({
-  id: '/app',
-  path: '/app',
+  id: "/app",
+  path: "/app",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const RapidStudioIndexRoute = RapidStudioIndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => RapidStudioRouteRoute,
-} as any)
+} as any);
 const AppIndexRoute = AppIndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => AppRouteRoute,
-} as any)
+} as any);
 const AppPostRoute = AppPostRouteImport.update({
-  id: '/post',
-  path: '/post',
+  id: "/post",
+  path: "/post",
   getParentRoute: () => AppRouteRoute,
-} as any)
+} as any);
 const RapidStudioAppRouteRoute = RapidStudioAppRouteRouteImport.update({
-  id: '/app_',
-  path: '/app',
+  id: "/app_",
+  path: "/app",
   getParentRoute: () => RapidStudioRouteRoute,
-} as any)
+} as any);
 const RapidStudioAppIndexRoute = RapidStudioAppIndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => RapidStudioAppRouteRoute,
-} as any)
+} as any);
 const RapidStudioAppAppIdIndexRoute =
   RapidStudioAppAppIdIndexRouteImport.update({
-    id: '/$appId_/',
-    path: '/$appId/',
+    id: "/$appId_/",
+    path: "/$appId/",
     getParentRoute: () => RapidStudioAppRouteRoute,
-  } as any)
+  } as any);
 const RapidStudioAppAppIdEntityIndexRoute =
   RapidStudioAppAppIdEntityIndexRouteImport.update({
-    id: '/$appId_/$entity_/',
-    path: '/$appId/$entity/',
+    id: "/$appId_/$entity_/",
+    path: "/$appId/$entity/",
     getParentRoute: () => RapidStudioAppRouteRoute,
-  } as any)
+  } as any);
 const RapidStudioAppAppIdEntityEntityIdRoute =
   RapidStudioAppAppIdEntityEntityIdRouteImport.update({
-    id: '/$appId_/$entity_/$entityId',
-    path: '/$appId/$entity/$entityId',
+    id: "/$appId_/$entity_/$entityId",
+    path: "/$appId/$entity/$entityId",
     getParentRoute: () => RapidStudioAppRouteRoute,
-  } as any)
+  } as any);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/rapid-studio': typeof RapidStudioRouteRouteWithChildren
-  '/rapid-studio/app': typeof RapidStudioAppRouteRouteWithChildren
-  '/app/post': typeof AppPostRoute
-  '/app/': typeof AppIndexRoute
-  '/rapid-studio/': typeof RapidStudioIndexRoute
-  '/rapid-studio/app/': typeof RapidStudioAppIndexRoute
-  '/rapid-studio/app/$appId': typeof RapidStudioAppAppIdIndexRoute
-  '/rapid-studio/app/$appId/$entity/$entityId': typeof RapidStudioAppAppIdEntityEntityIdRoute
-  '/rapid-studio/app/$appId/$entity': typeof RapidStudioAppAppIdEntityIndexRoute
+  "/": typeof IndexRoute;
+  "/app": typeof AppRouteRouteWithChildren;
+  "/rapid-studio": typeof RapidStudioRouteRouteWithChildren;
+  "/rapid-studio/app": typeof RapidStudioAppRouteRouteWithChildren;
+  "/app/post": typeof AppPostRoute;
+  "/app/": typeof AppIndexRoute;
+  "/rapid-studio/": typeof RapidStudioIndexRoute;
+  "/rapid-studio/app/": typeof RapidStudioAppIndexRoute;
+  "/rapid-studio/app/$appId": typeof RapidStudioAppAppIdIndexRoute;
+  "/rapid-studio/app/$appId/$entity/$entityId": typeof RapidStudioAppAppIdEntityEntityIdRoute;
+  "/rapid-studio/app/$appId/$entity": typeof RapidStudioAppAppIdEntityIndexRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/app/post': typeof AppPostRoute
-  '/app': typeof AppIndexRoute
-  '/rapid-studio': typeof RapidStudioIndexRoute
-  '/rapid-studio/app': typeof RapidStudioAppIndexRoute
-  '/rapid-studio/app/$appId': typeof RapidStudioAppAppIdIndexRoute
-  '/rapid-studio/app/$appId/$entity/$entityId': typeof RapidStudioAppAppIdEntityEntityIdRoute
-  '/rapid-studio/app/$appId/$entity': typeof RapidStudioAppAppIdEntityIndexRoute
+  "/": typeof IndexRoute;
+  "/app/post": typeof AppPostRoute;
+  "/app": typeof AppIndexRoute;
+  "/rapid-studio": typeof RapidStudioIndexRoute;
+  "/rapid-studio/app": typeof RapidStudioAppIndexRoute;
+  "/rapid-studio/app/$appId": typeof RapidStudioAppAppIdIndexRoute;
+  "/rapid-studio/app/$appId/$entity/$entityId": typeof RapidStudioAppAppIdEntityEntityIdRoute;
+  "/rapid-studio/app/$appId/$entity": typeof RapidStudioAppAppIdEntityIndexRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/rapid-studio': typeof RapidStudioRouteRouteWithChildren
-  '/rapid-studio/app_': typeof RapidStudioAppRouteRouteWithChildren
-  '/app/post': typeof AppPostRoute
-  '/app/': typeof AppIndexRoute
-  '/rapid-studio/': typeof RapidStudioIndexRoute
-  '/rapid-studio/app_/': typeof RapidStudioAppIndexRoute
-  '/rapid-studio/app_/$appId_/': typeof RapidStudioAppAppIdIndexRoute
-  '/rapid-studio/app_/$appId_/$entity_/$entityId': typeof RapidStudioAppAppIdEntityEntityIdRoute
-  '/rapid-studio/app_/$appId_/$entity_/': typeof RapidStudioAppAppIdEntityIndexRoute
+  __root__: typeof rootRouteImport;
+  "/": typeof IndexRoute;
+  "/app": typeof AppRouteRouteWithChildren;
+  "/rapid-studio": typeof RapidStudioRouteRouteWithChildren;
+  "/rapid-studio/app_": typeof RapidStudioAppRouteRouteWithChildren;
+  "/app/post": typeof AppPostRoute;
+  "/app/": typeof AppIndexRoute;
+  "/rapid-studio/": typeof RapidStudioIndexRoute;
+  "/rapid-studio/app_/": typeof RapidStudioAppIndexRoute;
+  "/rapid-studio/app_/$appId_/": typeof RapidStudioAppAppIdIndexRoute;
+  "/rapid-studio/app_/$appId_/$entity_/$entityId": typeof RapidStudioAppAppIdEntityEntityIdRoute;
+  "/rapid-studio/app_/$appId_/$entity_/": typeof RapidStudioAppAppIdEntityIndexRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
-    | '/'
-    | '/app'
-    | '/rapid-studio'
-    | '/rapid-studio/app'
-    | '/app/post'
-    | '/app/'
-    | '/rapid-studio/'
-    | '/rapid-studio/app/'
-    | '/rapid-studio/app/$appId'
-    | '/rapid-studio/app/$appId/$entity/$entityId'
-    | '/rapid-studio/app/$appId/$entity'
-  fileRoutesByTo: FileRoutesByTo
+    | "/"
+    | "/app"
+    | "/rapid-studio"
+    | "/rapid-studio/app"
+    | "/app/post"
+    | "/app/"
+    | "/rapid-studio/"
+    | "/rapid-studio/app/"
+    | "/rapid-studio/app/$appId"
+    | "/rapid-studio/app/$appId/$entity/$entityId"
+    | "/rapid-studio/app/$appId/$entity";
+  fileRoutesByTo: FileRoutesByTo;
   to:
-    | '/'
-    | '/app/post'
-    | '/app'
-    | '/rapid-studio'
-    | '/rapid-studio/app'
-    | '/rapid-studio/app/$appId'
-    | '/rapid-studio/app/$appId/$entity/$entityId'
-    | '/rapid-studio/app/$appId/$entity'
+    | "/"
+    | "/app/post"
+    | "/app"
+    | "/rapid-studio"
+    | "/rapid-studio/app"
+    | "/rapid-studio/app/$appId"
+    | "/rapid-studio/app/$appId/$entity/$entityId"
+    | "/rapid-studio/app/$appId/$entity";
   id:
-    | '__root__'
-    | '/'
-    | '/app'
-    | '/rapid-studio'
-    | '/rapid-studio/app_'
-    | '/app/post'
-    | '/app/'
-    | '/rapid-studio/'
-    | '/rapid-studio/app_/'
-    | '/rapid-studio/app_/$appId_/'
-    | '/rapid-studio/app_/$appId_/$entity_/$entityId'
-    | '/rapid-studio/app_/$appId_/$entity_/'
-  fileRoutesById: FileRoutesById
+    | "__root__"
+    | "/"
+    | "/app"
+    | "/rapid-studio"
+    | "/rapid-studio/app_"
+    | "/app/post"
+    | "/app/"
+    | "/rapid-studio/"
+    | "/rapid-studio/app_/"
+    | "/rapid-studio/app_/$appId_/"
+    | "/rapid-studio/app_/$appId_/$entity_/$entityId"
+    | "/rapid-studio/app_/$appId_/$entity_/";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AppRouteRoute: typeof AppRouteRouteWithChildren
-  RapidStudioRouteRoute: typeof RapidStudioRouteRouteWithChildren
+  IndexRoute: typeof IndexRoute;
+  AppRouteRoute: typeof AppRouteRouteWithChildren;
+  RapidStudioRouteRoute: typeof RapidStudioRouteRouteWithChildren;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/rapid-studio': {
-      id: '/rapid-studio'
-      path: '/rapid-studio'
-      fullPath: '/rapid-studio'
-      preLoaderRoute: typeof RapidStudioRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/app': {
-      id: '/app'
-      path: '/app'
-      fullPath: '/app'
-      preLoaderRoute: typeof AppRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/rapid-studio/': {
-      id: '/rapid-studio/'
-      path: '/'
-      fullPath: '/rapid-studio/'
-      preLoaderRoute: typeof RapidStudioIndexRouteImport
-      parentRoute: typeof RapidStudioRouteRoute
-    }
-    '/app/': {
-      id: '/app/'
-      path: '/'
-      fullPath: '/app/'
-      preLoaderRoute: typeof AppIndexRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/post': {
-      id: '/app/post'
-      path: '/post'
-      fullPath: '/app/post'
-      preLoaderRoute: typeof AppPostRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/rapid-studio/app_': {
-      id: '/rapid-studio/app_'
-      path: '/app'
-      fullPath: '/rapid-studio/app'
-      preLoaderRoute: typeof RapidStudioAppRouteRouteImport
-      parentRoute: typeof RapidStudioRouteRoute
-    }
-    '/rapid-studio/app_/': {
-      id: '/rapid-studio/app_/'
-      path: '/'
-      fullPath: '/rapid-studio/app/'
-      preLoaderRoute: typeof RapidStudioAppIndexRouteImport
-      parentRoute: typeof RapidStudioAppRouteRoute
-    }
-    '/rapid-studio/app_/$appId_/': {
-      id: '/rapid-studio/app_/$appId_/'
-      path: '/$appId'
-      fullPath: '/rapid-studio/app/$appId'
-      preLoaderRoute: typeof RapidStudioAppAppIdIndexRouteImport
-      parentRoute: typeof RapidStudioAppRouteRoute
-    }
-    '/rapid-studio/app_/$appId_/$entity_/': {
-      id: '/rapid-studio/app_/$appId_/$entity_/'
-      path: '/$appId/$entity'
-      fullPath: '/rapid-studio/app/$appId/$entity'
-      preLoaderRoute: typeof RapidStudioAppAppIdEntityIndexRouteImport
-      parentRoute: typeof RapidStudioAppRouteRoute
-    }
-    '/rapid-studio/app_/$appId_/$entity_/$entityId': {
-      id: '/rapid-studio/app_/$appId_/$entity_/$entityId'
-      path: '/$appId/$entity/$entityId'
-      fullPath: '/rapid-studio/app/$appId/$entity/$entityId'
-      preLoaderRoute: typeof RapidStudioAppAppIdEntityEntityIdRouteImport
-      parentRoute: typeof RapidStudioAppRouteRoute
-    }
+    "/rapid-studio": {
+      id: "/rapid-studio";
+      path: "/rapid-studio";
+      fullPath: "/rapid-studio";
+      preLoaderRoute: typeof RapidStudioRouteRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/app": {
+      id: "/app";
+      path: "/app";
+      fullPath: "/app";
+      preLoaderRoute: typeof AppRouteRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/rapid-studio/": {
+      id: "/rapid-studio/";
+      path: "/";
+      fullPath: "/rapid-studio/";
+      preLoaderRoute: typeof RapidStudioIndexRouteImport;
+      parentRoute: typeof RapidStudioRouteRoute;
+    };
+    "/app/": {
+      id: "/app/";
+      path: "/";
+      fullPath: "/app/";
+      preLoaderRoute: typeof AppIndexRouteImport;
+      parentRoute: typeof AppRouteRoute;
+    };
+    "/app/post": {
+      id: "/app/post";
+      path: "/post";
+      fullPath: "/app/post";
+      preLoaderRoute: typeof AppPostRouteImport;
+      parentRoute: typeof AppRouteRoute;
+    };
+    "/rapid-studio/app_": {
+      id: "/rapid-studio/app_";
+      path: "/app";
+      fullPath: "/rapid-studio/app";
+      preLoaderRoute: typeof RapidStudioAppRouteRouteImport;
+      parentRoute: typeof RapidStudioRouteRoute;
+    };
+    "/rapid-studio/app_/": {
+      id: "/rapid-studio/app_/";
+      path: "/";
+      fullPath: "/rapid-studio/app/";
+      preLoaderRoute: typeof RapidStudioAppIndexRouteImport;
+      parentRoute: typeof RapidStudioAppRouteRoute;
+    };
+    "/rapid-studio/app_/$appId_/": {
+      id: "/rapid-studio/app_/$appId_/";
+      path: "/$appId";
+      fullPath: "/rapid-studio/app/$appId";
+      preLoaderRoute: typeof RapidStudioAppAppIdIndexRouteImport;
+      parentRoute: typeof RapidStudioAppRouteRoute;
+    };
+    "/rapid-studio/app_/$appId_/$entity_/": {
+      id: "/rapid-studio/app_/$appId_/$entity_/";
+      path: "/$appId/$entity";
+      fullPath: "/rapid-studio/app/$appId/$entity";
+      preLoaderRoute: typeof RapidStudioAppAppIdEntityIndexRouteImport;
+      parentRoute: typeof RapidStudioAppRouteRoute;
+    };
+    "/rapid-studio/app_/$appId_/$entity_/$entityId": {
+      id: "/rapid-studio/app_/$appId_/$entity_/$entityId";
+      path: "/$appId/$entity/$entityId";
+      fullPath: "/rapid-studio/app/$appId/$entity/$entityId";
+      preLoaderRoute: typeof RapidStudioAppAppIdEntityEntityIdRouteImport;
+      parentRoute: typeof RapidStudioAppRouteRoute;
+    };
   }
 }
 
 interface AppRouteRouteChildren {
-  AppPostRoute: typeof AppPostRoute
-  AppIndexRoute: typeof AppIndexRoute
+  AppPostRoute: typeof AppPostRoute;
+  AppIndexRoute: typeof AppIndexRoute;
 }
 
 const AppRouteRouteChildren: AppRouteRouteChildren = {
   AppPostRoute: AppPostRoute,
   AppIndexRoute: AppIndexRoute,
-}
+};
 
 const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
   AppRouteRouteChildren,
-)
+);
 
 interface RapidStudioAppRouteRouteChildren {
-  RapidStudioAppIndexRoute: typeof RapidStudioAppIndexRoute
-  RapidStudioAppAppIdIndexRoute: typeof RapidStudioAppAppIdIndexRoute
-  RapidStudioAppAppIdEntityEntityIdRoute: typeof RapidStudioAppAppIdEntityEntityIdRoute
-  RapidStudioAppAppIdEntityIndexRoute: typeof RapidStudioAppAppIdEntityIndexRoute
+  RapidStudioAppIndexRoute: typeof RapidStudioAppIndexRoute;
+  RapidStudioAppAppIdIndexRoute: typeof RapidStudioAppAppIdIndexRoute;
+  RapidStudioAppAppIdEntityEntityIdRoute: typeof RapidStudioAppAppIdEntityEntityIdRoute;
+  RapidStudioAppAppIdEntityIndexRoute: typeof RapidStudioAppAppIdEntityIndexRoute;
 }
 
 const RapidStudioAppRouteRouteChildren: RapidStudioAppRouteRouteChildren = {
@@ -271,29 +271,29 @@ const RapidStudioAppRouteRouteChildren: RapidStudioAppRouteRouteChildren = {
   RapidStudioAppAppIdEntityEntityIdRoute:
     RapidStudioAppAppIdEntityEntityIdRoute,
   RapidStudioAppAppIdEntityIndexRoute: RapidStudioAppAppIdEntityIndexRoute,
-}
+};
 
 const RapidStudioAppRouteRouteWithChildren =
-  RapidStudioAppRouteRoute._addFileChildren(RapidStudioAppRouteRouteChildren)
+  RapidStudioAppRouteRoute._addFileChildren(RapidStudioAppRouteRouteChildren);
 
 interface RapidStudioRouteRouteChildren {
-  RapidStudioAppRouteRoute: typeof RapidStudioAppRouteRouteWithChildren
-  RapidStudioIndexRoute: typeof RapidStudioIndexRoute
+  RapidStudioAppRouteRoute: typeof RapidStudioAppRouteRouteWithChildren;
+  RapidStudioIndexRoute: typeof RapidStudioIndexRoute;
 }
 
 const RapidStudioRouteRouteChildren: RapidStudioRouteRouteChildren = {
   RapidStudioAppRouteRoute: RapidStudioAppRouteRouteWithChildren,
   RapidStudioIndexRoute: RapidStudioIndexRoute,
-}
+};
 
 const RapidStudioRouteRouteWithChildren =
-  RapidStudioRouteRoute._addFileChildren(RapidStudioRouteRouteChildren)
+  RapidStudioRouteRoute._addFileChildren(RapidStudioRouteRouteChildren);
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRouteRoute: AppRouteRouteWithChildren,
   RapidStudioRouteRoute: RapidStudioRouteRouteWithChildren,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();

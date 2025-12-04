@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES2023",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["node"],
+    "baseUrl": "."
+  },
+  "include": ["src"],
+  "ts-node": {
+    "esm": true
+  }
+}
