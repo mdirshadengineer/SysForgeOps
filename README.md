@@ -1,3 +1,3 @@
-# FlowForge
+# SysForgeOps
 
-This project is a monorepo.
+Automate. Innovate. Elevate.
