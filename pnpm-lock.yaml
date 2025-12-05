@@ -63,7 +63,7 @@ importers:
         specifier: ^5.9.2
         version: 5.9.3
 
-  packages/cli:
+  apps/cli:
     dependencies:
       "@oclif/core":
         specifier: ^4
@@ -124,7 +124,7 @@ importers:
         specifier: ^5
         version: 5.9.3
 
-  packages/frontend:
+  apps/frontend:
     dependencies:
       "@hookform/resolvers":
         specifier: ^5.2.2
@@ -359,7 +359,7 @@ importers:
         specifier: npm:rolldown-vite@7.1.14
         version: rolldown-vite@7.1.14(@types/node@24.10.1)(esbuild@0.25.12)(jiti@2.6.1)(terser@5.44.1)(tsx@4.21.0)
 
-  packages/server:
+  apps/server:
     dependencies:
       "@nestjs/common":
         specifier: ^11.0.1
