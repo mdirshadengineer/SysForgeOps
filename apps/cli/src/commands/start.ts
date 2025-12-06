@@ -16,7 +16,7 @@ export default class Start extends Command {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Start);
-
+    console.log("Starting the server...");
     return;
   }
 }

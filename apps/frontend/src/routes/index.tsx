@@ -88,7 +88,7 @@ function Hero() {
               {/* Pill to show trust message */}
               <div className="mb-6 flex justify-center">
                 <div className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 select-none dark:bg-blue-900 dark:text-blue-200">
-                  ✨ Trusted by enterprise worldwide
+                  ✨ Trusted by enterprise worldwide.
                 </div>
               </div>
               <h1 className="text-foreground mb-6 text-4xl font-bold select-none sm:text-5xl lg:text-6xl">

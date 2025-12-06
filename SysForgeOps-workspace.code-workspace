@@ -69,7 +69,7 @@
     },
     // workbench settings
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "git.ignoreLimitWarning": true,
     "typescript.tsdk": "node_modules\\typescript\\lib",
   },

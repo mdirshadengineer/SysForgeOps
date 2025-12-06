@@ -1,7 +1,7 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "globalEnv": ["NODE_ENV", "API_BASE_URL", "CLI_MODE", "DATABASE_URL"],
-  "ui": "tui",
+  "ui": "stream",
   "tasks": {
     "clean": { "cache": false },
     "build": {
